@@ -135,7 +135,7 @@ input('Aperte [Enter] para iniciar o jogo... ')
 
 print('Situação atual:')
 
-i = 1
+i = 0
 cartas = cria_baralho()
 for carta in cartas:
     print('{}. {}'.format(i, carta))
@@ -146,9 +146,9 @@ posicao = input('Digite a posição da carta que deseja escolher: ')
 
 x = lista_movimentos_possiveis(baralho, posicao)
 
-i = True
+contador = True
 
-while i:
+while contador:
     if x == []:
         posicao = ('Essa carta não pode ser movida. Escolha outra posição: ')
     elif x == [1]:
