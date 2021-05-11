@@ -113,6 +113,7 @@ def possui_movimentos_possiveis(baralho):
             posicoes += 1
     return False
 
+# 
 
 print('Paciência Acordeão')
 print('==================')
@@ -134,15 +135,32 @@ input('Aperte [Enter] para iniciar o jogo... ')
 
 print('Situação atual:')
 
-def print_baralho():
-    i = 1
-    cartas = cria_baralho()
-    for carta in cartas:
-        print('{}. {}'.format(i, carta))
-        i += 1
+i = 1
+cartas = cria_baralho()
+for carta in cartas:
+    print('{}. {}'.format(i, carta))
+    i += 1
+
 
 posicao = input('Digite a posição da carta que deseja escolher: ')
 
+x = lista_movimentos_possiveis(baralho, posicao)
+
+if x == []:
+    posicao = ('Essa carta não pode ser movida. Escolha outra posição: ')
+elif x == [1]:
+    print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao-1))
+elif x == [3]:
+    print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao -3))
+else:
+    print('Você tem duas opções: ')
+    print('1.', baralho[posicao-1])
+    print('2.', baralho[posicao-3])
+    y = input('Sobre qual carta você deseja empilhar?: ')
+    if y == 1:
+        print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao-1))
+    elif y == 2:
+        print(print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao -3))
 
 
 
