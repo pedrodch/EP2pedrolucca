@@ -113,6 +113,7 @@ def possui_movimentos_possiveis(baralho):
             posicoes += 1
     return False
 
+
 print('Paciência Acordeão')
 print('==================')
 
@@ -129,4 +130,15 @@ print('2. As duas cartas possuem o mesmo naipe. ')
 
 print('Desde que alguma das condições acima seja satisfeita, qualquer carta pode ser movimentada. ')
 
-input('Aperte [Enter] para iniciar o jogo... ')
+
+
+i = 1
+cartas = cria_baralho()
+for carta in cartas:
+    print('{}. {}'.format(i, carta))
+    i += 1
+
+
+
+
+
