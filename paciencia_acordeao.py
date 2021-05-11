@@ -130,3 +130,6 @@ print('2. As duas cartas possuem o mesmo naipe. ')
 print('Desde que alguma das condições acima seja satisfeita, qualquer carta pode ser movimentada. ')
 
 input('Aperte [Enter] para iniciar o jogo... ')
+
+
+
