@@ -132,13 +132,16 @@ print('Desde que alguma das condições acima seja satisfeita, qualquer carta po
 
 input('Aperte [Enter] para iniciar o jogo... ')
 
+print('Situação atual:')
 
-i = 1
-cartas = cria_baralho()
-for carta in cartas:
-    print('{}. {}'.format(i, carta))
-    i += 1
+def print_baralho():
+    i = 1
+    cartas = cria_baralho()
+    for carta in cartas:
+        print('{}. {}'.format(i, carta))
+        i += 1
 
+posicao = input('Digite a posição da carta que deseja escolher: ')
 
 
 
