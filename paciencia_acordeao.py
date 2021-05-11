@@ -1,7 +1,6 @@
 # Jogo Paciência Acordeão
 
 # Função que cria o baralho
-
 def cria_baralho():
     import random
     e1 = 'A♠'
@@ -61,12 +60,10 @@ def cria_baralho():
     return baralho
 
 # Função que extrai o naipe da carta
-
 def extrai_naipe(carta):
     return carta[-1]
 
 # Função que extrai o valor da carta
-
 def extrai_valor(carta):
     if len(carta) == 3:
         return '10'
@@ -74,7 +71,6 @@ def extrai_valor(carta):
         return carta[0]
 
 # Função que mostra os movimentos possíveis
-
 def lista_movimentos_possiveis(baralho, posicao):
     naipe = extrai_naipe(baralho[posicao])
     numero = extrai_valor(baralho[posicao])
@@ -102,14 +98,12 @@ def lista_movimentos_possiveis(baralho, posicao):
     return possibilidades
 
 # Função que empilha baralhos
-
 def empilha(baralho, origem, destino):
     baralho[destino] = baralho[origem]
     baralho.pop(origem)
     return baralho
 
 # Função que mostra se tem movimentos possíveis
-
 def possui_movimentos_possiveis(baralho):
     posicoes = 0
     for i in baralho:
@@ -119,3 +113,20 @@ def possui_movimentos_possiveis(baralho):
             posicoes += 1
     return False
 
+print('Paciência Acordeão')
+print('==================')
+
+print('Seja bem-vindo(a) ao jogo de Paciência Acordeão! O objetivo deste jogo é colocar todas as cartas em uma mesma pilha.')
+print('Existem apenas dois movimentos possíveis: ')
+
+print('1. Empilhar uma carta sobre a carta imediatamente anterior; ')
+print('2. Empilhar uma carta sobre a terceira carta anterior.')
+
+print('Para que um movimento possa ser realizado basta que uma das duas condições abaixo seja atendida: ')
+
+print('1. As duas cartas possuem o mesmo valor ou ')
+print('2. As duas cartas possuem o mesmo naipe. ')
+
+print('Desde que alguma das condições acima seja satisfeita, qualquer carta pode ser movimentada. ')
+
+input('Aperte [Enter] para iniciar o jogo... ')
