@@ -55,13 +55,16 @@ def cria_baralho():
     baralho= [e1, c1, o1, p1, e2, c2, o2, p2, e3, c3, o3, p3, e4, c4, o4, p4, e5, c5, o5, p5, e6, c6, o6, p6, e7, c7, o7, p7, e8, c8, o8, p8, e9, c9, o9, p9, e10, c10, o10, p10, e11, c11, o11, p11, e12, c12, o12, p12, e13, c13, o13, p13]
     random.shuffle(baralho)
     return baralho
+
 def extrai_naipe(carta):
     return carta[-1]
+
 def extrai_valor(carta):
     if len(carta) == 3:
         return '10'
     else:
         return carta[0]
+
 def lista_movimentos_possiveis(baralho, posicao):
     naipe = extrai_naipe(baralho[posicao])
     numero = extrai_valor(baralho[posicao])
