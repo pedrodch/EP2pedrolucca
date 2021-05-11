@@ -135,7 +135,7 @@ input('Aperte [Enter] para iniciar o jogo... ')
 
 print('Situação atual:')
 
-i = 0
+i = 1
 cartas = cria_baralho()
 for carta in cartas:
     print('{}. {}'.format(i, carta))
@@ -164,3 +164,4 @@ while contador:
             print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao-1))
         elif y == 2:
             print(print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao -3))
+
