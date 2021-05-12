@@ -135,8 +135,12 @@ input('Aperte [Enter] para iniciar o jogo... ')
 
 print('Situação atual:')
 
+def print_baralho(baralho):
 i = 1
+<<<<<<< HEAD
 baralho = cria_baralho()
+=======
+>>>>>>> a0585aad272e7f788f6a69481715c8f9ebcd8ec6
 for carta in baralho:
     print('{}. {}'.format(i, carta))
     i += 1
