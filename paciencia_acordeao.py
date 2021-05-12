@@ -136,21 +136,18 @@ input('Aperte [Enter] para iniciar o jogo... ')
 print('Situação atual:')
 
 i = 1
-cartas = cria_baralho()
-for carta in cartas:
+baralho = cria_baralho()
+for carta in baralho:
     print('{}. {}'.format(i, carta))
     i += 1
-
-
-posicao = input('Digite a posição da carta que deseja escolher: ')
-
-x = lista_movimentos_possiveis(baralho, posicao)
 
 contador = True
 
 while contador:
+    posicao = input('Digite a posição da carta que deseja escolher: ')
+    x = lista_movimentos_possiveis(baralho, posicao)
     if x == []:
-        posicao = ('Essa carta não pode ser movida. Escolha outra posição: ')
+        posicao = input('Essa carta não pode ser movida. Escolha outra posição: ')
     elif x == [1]:
         print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao-1))
     elif x == [3]:
@@ -162,6 +159,7 @@ while contador:
         y = input('Sobre qual carta você deseja empilhar?: ')
         if y == 1:
             print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao-1))
-        elif y == 2:
-            print(print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao -3))
-
+            baralho = empilha(baralho, posicao, posicao-1))
+        if y == 2:
+            print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao -3))
+            baralho = empilha(baralho, posicao, posicao-3))
