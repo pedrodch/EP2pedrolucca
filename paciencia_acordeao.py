@@ -135,13 +135,13 @@ input('Aperte [Enter] para iniciar o jogo... ')
 
 print('Situação atual:')
 
+def print_baralho(baralho):
 i = 1
-cartas = cria_baralho()
-for carta in cartas:
+for carta in baralho:
     print('{}. {}'.format(i, carta))
     i += 1
 
-
+baralho = cria_baralho()
 posicao = input('Digite a posição da carta que deseja escolher: ')
 
 x = lista_movimentos_possiveis(baralho, posicao)
