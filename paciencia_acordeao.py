@@ -144,22 +144,46 @@ for carta in baralho:
 contador = True
 
 while contador:
-    posicao = input('Digite a posição da carta que deseja escolher: ')
+    posicao = int(input('Digite a posição da carta que deseja escolher: '))
     x = lista_movimentos_possiveis(baralho, posicao)
     if x == []:
-        posicao = input('Essa carta não pode ser movida. Escolha outra posição: ')
-    elif x == [1]:
-        print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao-1))
+        posicao = int(input('Essa carta não pode ser movida. Escolha outra posição: '))
+    if x == [1]:
+        print('O estado atual do baralho é: ')
+        baralho = empilha(baralho, posicao, posicao-1)
+        a = 1
+        for carta in baralho:
+            print('{}. {}'.format(a, carta))
+            a += 1
     elif x == [3]:
-        print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao -3))
+        print('O estado atual do baralho é: ')
+        baralho = empilha(baralho, posicao, posicao-3)
+        b = 1
+        for carta in baralho:
+            print('{}. {}'.format(b, carta))
+            b += 1
     else:
         print('Você tem duas opções: ')
         print('1.', baralho[posicao-1])
         print('2.', baralho[posicao-3])
-        y = input('Sobre qual carta você deseja empilhar?: ')
+        y = int(input('Sobre qual carta você deseja empilhar?: '))
         if y == 1:
-            print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao-1))
-            baralho = empilha(baralho, posicao, posicao-1))
+            print('O estado atual do baralho é: ')
+            baralho = empilha(baralho, posicao, posicao-1)
+            c = 1
+            for carta in baralho:
+                print('{}. {}'.format(c, carta))
+                c += 1
         if y == 2:
-            print('O estado atual do baralho é: ', empilha(baralho, posicao, posicao -3))
-            baralho = empilha(baralho, posicao, posicao-3))
+            print('O estado atual do baralho é: ')
+            baralho = empilha(baralho, posicao, posicao-3)
+            d = 1
+            for carta in baralho:
+                print('{}. {}'.format(d, carta))
+                d += 1
+    if len(baralho) == 1:
+        print('Voce ganhou!')
+        contador = False
+    if not possui_movimentos_possiveis(baralho):
+        print('Voce perdeu!')
+        contador = False
